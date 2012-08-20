@@ -9,8 +9,7 @@
         <ul class="nav">
             {%- block rootrellink %}
                 <li class="active"><a class="brand"
-                       href="{{ pathto(master_doc) }}">MathJax Documentation v{{ version|e }} </a> </li>
-                <li> <a class="btn btn-mini" href="http://docs.mathjax.org/">new version!</a> </li>
+                       href="{{ pathto(master_doc) }}">Documentation v{{ version|e }} </a> </li>
             {%- endblock %}
             {%- for rellink in rellinks %}
                 <li>
@@ -175,16 +174,12 @@
             <div class="container">
 
                 {%- block headerlogo %}
-                    {%- if logo %}
-                        <a href="{{ pathto(master_doc) }}">
-                            <img class="logo" src="{{ pathto('_static/' + logo, 1) }}"
-                            {% if theme_logo_width %} width="{{ theme_logo_width }}"{% endif %}
-                            {% if theme_logo_height %} height="{{ theme_logo_height }}"{% endif %}
-                            alt="{{ project|e }}" title="{{ project|e }}"/>
+                <div class="pull-left">
+                        <a href="http://www.mathjax.org">
+                            <img class="logo" src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif"
+                            width="80%" heigh="80%" alt="MathJax" title="MathJax"/>
                         </a>
-                    {%- else %}
-{#                        <a class="brand" href="./index.html">Bootstrap</a>#}
-                    {%- endif %}
+                </div>
                 {%- endblock %}
 
                 {%- block relbar1 %}{{ relbar() }}{% endblock %}
@@ -198,7 +193,7 @@
 
 <ul class="quick-links">
     <li><strong>Quick links</strong></li>
-    <li> <a href="http://www.mathjax.org/"><img src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" width="5%" heigh="5%" alt="MathJax" /></a> 
+    <li><a class="btn btn-mini" href="http://docs.mathjax.org/">new version!</a>  </li>
     </li>
     <li>
         <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}/">GitHub</a>
