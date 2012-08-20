@@ -4,11 +4,16 @@
 
 {# Sidebar: Rework into our Boostrap nav section. #}
 {% macro navBar() %}
+<div class="page-header">
+<h1> </h1>
+</div>
   <div id="navbar" class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container-fluid">
-        <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a>
-        <span class="navbar-text pull-left"><b>{{ version|e }}</b></span>
+        <a class="brand" href="http://www.mathjax.org/"><img src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" alt="MathJax"></a>
+<!--        <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a>-->
+        <a class="brand" href="{{ pathto(master_doc) }}"> Docs</a>
+        <span class="navbar-text pull-left"><b>v{{ version|e }}</b> <a class="btn btn-warning" href="http://docs.mathjax.org/">old!</a></span>
           <ul class="nav">
             <li class="divider-vertical"></li>
             {% block sidebartoc %}
