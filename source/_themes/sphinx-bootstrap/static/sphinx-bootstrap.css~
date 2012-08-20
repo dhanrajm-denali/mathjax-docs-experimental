@@ -1,9 +1,47 @@
-@import "bootstrap.css";
+@import "bootstrap-responsive.min.css";
 
 a {
     color: #0E84B5;
 }
 
+a:hover, .nav a:hover {
+    color: #f26a1e;
+    cursor: pointer;
+}
+
+.navbar-inner {
+    background: #fff;
+    background-color: #fff;
+    height: 45px;
+}
+
+.navbar .brand {
+    color: #0E84B5;
+    font-size: 25px;
+    font-weight: normal;
+    /*font-family: 'Crete Round', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+
+.navbar .brand a:hover, .navbar ul .active > a {
+    color: #0E84B5;
+    text-decoration: none;
+}
+
+/*.navbar .brand {*/
+    /*float: left;*/
+    /*display: block;*/
+    /*padding: 8px 20px 12px;*/
+    /*margin-left: -20px;*/
+    /*font-size: 20px;*/
+    /*font-weight: 200;*/
+    /*line-height: 1;*/
+    /*color: #ffffff;*/
+/*}*/
+
+.nav a {
+    text-shadow: none;
+    color: #0E84B5;
+}
 
 .content {
     padding-top: 25px;

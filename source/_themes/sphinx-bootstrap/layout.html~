@@ -9,8 +9,8 @@
         <ul class="nav">
             {%- block rootrellink %}
                 <li class="active"><a class="brand"
-                       href="{{ pathto(master_doc) }}">v{{ version|e }} Documentation </a> </li>
-                <li> <a class="btn btn-small btn-warning" href="http://docs.mathjax.org/">v2.0 is out!</a> </li>
+                       href="{{ pathto(master_doc) }}">MathJax Documentation v{{ version|e }} </a> </li>
+                <li> <a class="btn btn-mini" href="http://docs.mathjax.org/">new version!</a> </li>
             {%- endblock %}
             {%- for rellink in rellinks %}
                 <li>
@@ -198,6 +198,8 @@
 
 <ul class="quick-links">
     <li><strong>Quick links</strong></li>
+    <li> <a href="http://www.mathjax.org/"><img src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" width="5%" heigh="5%" alt="MathJax" /></a> 
+    </li>
     <li>
         <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}/">GitHub</a>
     </li>
