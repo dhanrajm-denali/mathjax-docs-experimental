@@ -1,54 +1,109 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    
+        <title>Modifying Math on the Page &mdash; MathJax 2.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+            var DOCUMENTATION_OPTIONS = {
+                URL_ROOT:'',
+                VERSION:'2.0',
+                COLLAPSE_INDEX:false,
+                FILE_SUFFIX:'.html',
+                HAS_SOURCE:  true
+            };
+        </script>
+            <script type="text/javascript" src="_static/jquery.js"></script>
+            <script type="text/javascript" src="_static/underscore.js"></script>
+            <script type="text/javascript" src="_static/doctools.js"></script>
+            <script type="text/javascript" src="_static/bootstrap-dropdown.js"></script>
+        <link rel="top" title="MathJax 2.0 documentation" href="index.html"/>
+            <link rel="next" title="The MathJax API" href="api/index.html"/>
+            <link rel="prev" title="Loading MathJax Dynamically" href="dynamic.html"/> 
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    
+</head>
+<body>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Modifying Math on the Page &mdash; MathJax v2.0 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '2.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v2.0 documentation" href="index.html" />
-    <link rel="next" title="The MathJax API" href="api/index.html" />
-    <link rel="prev" title="Loading MathJax Dynamically" href="dynamic.html" /> 
-  </head>
-  <body>
-    
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+
     <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="api/index.html" title="The MathJax API"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="dynamic.html" title="Loading MathJax Dynamically"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v2.0 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+        <ul class="nav">
+    <li><a href="http://www.mathjax.org/"><img src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" width="50%" alt="MathJax"></a> </li>
+    
+                <li class="active"><a class="brand"
+                       href="index.html">v2.0 Documentation </a> </li>
+                <li> <a class="btn btn-mini btn-warning" href="http://docs.mathjax.org/">v2.0 is out!</a> </li>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
+                <li>
+                    <a href="genindex.html"
+                       title="General Index" accesskey="I">index</a>
+                </li>
+                <li>
+                    <a href="api/index.html"
+                       title="The MathJax API" accesskey="N">next</a>
+                </li>
+                <li>
+                    <a href="dynamic.html"
+                       title="Loading MathJax Dynamically" accesskey="P">previous</a>
+                </li> 
+        </ul>
+    </div>
+                <div class="pull-right">
+                    
+        <form class="navbar-search" action="search.html"
+              method="get">
+            <input type="text" name="q" placeholder="search"/>
+            <input type="hidden" name="check_keywords" value="yes"/>
+            <input type="hidden" name="area" value="default"/>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<ul class="quick-links">
+    <li><strong>Quick links</strong></li>
+    <li>
+        <a href="https://github.com/mathjax/mathjax/">GitHub</a>
+    </li>
+    <li>
+        <a href="https://github.com/mathjax/mathjax/issues?state=open">Issues</a>
+    </li>
+
+    <li class="divider">&middot;</li>
+    <li class="follow-btn">
+        <a href="https://twitter.com/mathjax"
+           class="twitter-follow-button" data-width="145px"
+           data-link-color="#0069D6" data-show-count="false">Follow
+            @mathjax</a>
+    </li>
+    <li class="tweet-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button"
+           data-url="" data-count="horizontal"
+           data-via="twbootstrap"
+           data-related="mathjax:Creator of MathJax">Tweet</a>
+    </li>
+    <li class="plusone-container">
+        <g:plusone size="medium"></g:plusone>
+    </li>
+</ul>  
+    <div class="container">
+        <div class="content row">
+                <div class="span9">
+                    
   <div class="section" id="modifying-math-on-the-page">
 <span id="typeset-math"></span><h1>Modifying Math on the Page<a class="headerlink" href="#modifying-math-on-the-page" title="Permalink to this headline">¶</a></h1>
 <p>If you are writing a dynamic web page where content containing
@@ -283,11 +338,12 @@ with MathJax.</p>
 </div>
 
 
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
+                    
+                </div>
+                <div class="span3">
+                    
+        <div class="sphinxsidebar">
+            <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Modifying Math on the Page</a><ul>
@@ -302,42 +358,58 @@ with MathJax.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="api/index.html"
                         title="next chapter">The MathJax API</a></p>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/typeset.txt"
+           rel="nofollow">Show Source</a></li>
+    <li><a href="https://github.com/pkra/mathjax-docs/tree/master/typeset.rst"
+           rel="nofollow">Edit Source (on GitHub)</a></li>
+  </ul>
+            </div>
         </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="api/index.html" title="The MathJax API"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="dynamic.html" title="Loading MathJax Dynamically"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v2.0 documentation</a> &raquo;</li> 
-      </ul>
+                </div>
+            
+        </div>
     </div>
     <div class="footer">
-        &copy; Copyright 2012 Design Science.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+        
+        <div class="container">
+                    &copy;
+                        Copyright 2012 Design Science.
+                Created using <a
+                        href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3
+                    .
+                Theme <a href="https://github.com/scotch/sphinx-bootstrap">Sphinx-Bootstrap</a>
+                adapted from
+                <a href="http://twitter.github.com/bootstrap/">Twitter's
+                    Bootstrap</a> by <a href="http://www.scotchmedia.com">Scotch
+                Media</a>
+        </div>
     </div>
-    
-  </body>
+
+
+
+<script type="text/javascript">
+    $('.nav .active').on('click', function () {
+        e.preventDefault()
+        $(this).siblings().toggle()
+    });
+</script>
+
+<!-- plusone -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<!-- twitter -->
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</body>
 </html>

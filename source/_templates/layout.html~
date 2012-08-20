@@ -1,0 +1,6 @@
+{% extends "!layout.html" %}
+{% block rootrellink %}
+    <li><a href="http://www.mathjax.org/"><img src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" width="50%" alt="MathJax"></a> &raquo;</li>
+    {{ super() }}
+    <li> This documentation is for an older version of MathJax </li>
+{% endblock %}
