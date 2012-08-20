@@ -1,4 +1,8 @@
-<!--{%- if show_source and has_source and sourcename %}
+{% block sidebarlogo %}
+    <li><a href="http://www.mathjax.org/"><img src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif" width="30%" alt="MathJax"></a> </li>
+    <li> <a href="http://docs.mathjax.org/">New version!</a>
+    {{ super() }}
+{% endblock %}{%- if show_source and has_source and sourcename %}
   <h3>{{ _('This Page') }}</h3>
   <ul class="this-page-menu">
     <li><a href="{{ pathto('_sources/' + sourcename, true)|e }}"
@@ -6,4 +10,4 @@
     <li><a href="https://github.com/pkra/mathjax-docs/tree/master/{{ pagename }}.rst"
            rel="nofollow">{{ _('Edit Source (on GitHub)') }}</a></li>
   </ul>
-{%- endif %}-->
+{%- endif %}
