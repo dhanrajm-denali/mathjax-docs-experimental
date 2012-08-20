@@ -1,4 +1,4 @@
-{%- if show_source and has_source and sourcename %}
+<!--{%- if show_source and has_source and sourcename %}
   <h3>{{ _('This Page') }}</h3>
   <ul class="this-page-menu">
     <li><a href="{{ pathto('_sources/' + sourcename, true)|e }}"
@@ -6,4 +6,4 @@
     <li><a href="https://github.com/pkra/mathjax-docs/tree/master/{{ pagename }}.rst"
            rel="nofollow">{{ _('Edit Source (on GitHub)') }}</a></li>
   </ul>
-{%- endif %}
+{%- endif %}-->
