@@ -95,7 +95,7 @@ pygments_style = 'sphinx'
 # Sphinx are currently 'default' and 'sphinxdoc'.
 html_theme = 'sphinx-bootstrap'
 html_theme_options = {
-    'analytics_code': 'UA-00000000-1',
+    'analytics_code': 'UA-15609829-1',
     'github_user': 'mathjax',
     'github_repo': 'mathjax',
     'twitter_username': 'mathjax',

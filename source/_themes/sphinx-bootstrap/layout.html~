@@ -10,7 +10,7 @@
             {%- block rootrellink %}
                 <li><a href="http://www.mathjax.org/"><img src="_static/logo2.png" alt="MathJax"></a> </li>
                 <li class="active"><a class="brand"
-                       href="{{ pathto(master_doc) }}">&raquo;Docs v{{ version|e }}</a></li>
+                       href="{{ pathto(master_doc) }}">&raquo;{{ project|e }} v{{ version|e }} Docs</a></li>
             {%- endblock %}
             {%- for rellink in rellinks %}
                 <li>
