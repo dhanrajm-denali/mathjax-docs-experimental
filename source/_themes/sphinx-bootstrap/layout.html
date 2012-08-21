@@ -9,7 +9,7 @@
         <ul class="nav">
             {%- block rootrellink %}
                 <li class="active"><a class="brand"
-                       href="{{ pathto(master_doc) }}">Documentation v{{ version|e }} </a> </li>
+                       href="{{ pathto(master_doc) }}">{{ project|e }} v{{ version|e }} Docs</a></li>
             {%- endblock %}
             {%- for rellink in rellinks %}
                 <li>
@@ -174,12 +174,16 @@
             <div class="container">
 
                 {%- block headerlogo %}
-                <div class="pull-left">
-                        <a href="http://www.mathjax.org">
-                            <img class="logo" src="http://www.mathjax.org/wp-content/themes/mathjax/images/logo.gif"
-                            width="75%" heigh="75%" alt="MathJax" title="MathJax"/>
+                    {%- if logo %}
+                        <a href="{{ pathto(master_doc) }}">
+                            <img class="logo" src="{{ pathto('_static/' + logo, 1) }}"
+                            {% if theme_logo_width %} width="{{ theme_logo_width }}"{% endif %}
+                            {% if theme_logo_height %} height="{{ theme_logo_height }}"{% endif %}
+                            alt="{{ project|e }}" title="{{ project|e }}"/>
                         </a>
-                </div>
+                    {%- else %}
+{#                        <a class="brand" href="./index.html">Bootstrap</a>#}
+                    {%- endif %}
                 {%- endblock %}
 
                 {%- block relbar1 %}{{ relbar() }}{% endblock %}
@@ -193,13 +197,26 @@
 
 <ul class="quick-links">
     <li><strong>Quick links</strong></li>
-    <li><a class="btn btn-mini" href="http://docs.mathjax.org/">new version!</a>  </li>
+    <li><a class="btn btn-mini" href="http://docs.mathjax.org/">new version!</a>
     </li>
     <li>
         <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}/">GitHub</a>
     </li>
     <li>
         <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}/issues?state=open">Issues</a>
+    </li>
+    <li class="divider">&middot;</li>
+    <li>
+        <iframe class="github-btn"
+                src="http://ghbtns.com/github-btn.html?user={{ theme_github_user }}&repo={{ theme_github_repo }}&type=watch&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0"
+                width="110px" height="20px"></iframe>
+    </li>
+    <li>
+        <iframe class="github-btn"
+                src="http://ghbtns.com/github-btn.html?user={{ theme_github_user }}&repo={{ theme_github_repo }}&type=fork&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0"
+                width="94px" height="20px"></iframe>
     </li>
 
     <li class="divider">&middot;</li>
