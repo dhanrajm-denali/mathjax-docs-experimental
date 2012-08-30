@@ -9,8 +9,7 @@
         <ul class="nav">
             {%- block rootrellink %}
                 <li><a href="http://www.mathjax.org/"><img src="_static/logo2.png" alt="MathJax"></a> </li>
-                <li class="active"><a class="brand"
-                       href="{{ pathto(master_doc) }}">&raquo;Docs v{{ version|e }}</a></li>
+                <li class=""><a class="brand" href="{{ pathto(master_doc) }}">&raquo;Docs v{{ version|e }}</a></li>
             {%- endblock %}
             {%- for rellink in rellinks %}
                 <li>
@@ -170,7 +169,7 @@
 
 {%- block header %}
 
-    <div class="navbar">
+    <div class="navbar navbar-static-top">
         <div class="navbar-inner">
             <div class="container">
 
@@ -198,8 +197,6 @@
 
 <ul class="quick-links">
     <li><strong>Quick links</strong></li>
-    <li><a class="btn btn-mini" href="http://docs.mathjax.org/">new version!</a>
-    </li>
     <li>
         <a href="https://github.com/{{ theme_github_user }}/{{ theme_github_repo }}/">GitHub</a>
     </li>
